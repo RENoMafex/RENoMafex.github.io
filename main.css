@@ -83,10 +83,21 @@ div {
     margin-bottom: 0.5em;
 }
 
-div.narrow {
+div.round {
     padding: 1em;
     border-radius: 2em;
     width: fit-content;
+}
+
+a.round {
+    background-color: #2a2a2a;
+    padding: 1em;
+    border-radius: 2em;
+    width: fit-content;
+}
+
+a.round:hover {
+    background-color: #1a1a1a;
 }
 
 div.shape {
@@ -94,6 +105,18 @@ div.shape {
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
     width: fit-content;
+}
+
+a.shape {
+    background-color: #2a2a2a;
+    padding: 1em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    width: fit-content;
+}
+
+a.shape:hover {
+    background-color: #1a1a1a;
 }
 
 div.clear {
@@ -153,10 +176,11 @@ div.tclear {
     color: #2a2a2a;
 }
 
-
-
 #footer {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -166,13 +190,3 @@ div.tclear {
     text-align: center;
 }
 
-a.shape {
-    background-color: #2a2a2a;
-    text-decoration: none;
-    padding: 1em;
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    width: fit-content;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
