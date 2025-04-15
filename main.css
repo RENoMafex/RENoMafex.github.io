@@ -1,0 +1,111 @@
+body {
+    background-color: #404040;
+    color: #b0b0b0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff8800;
+}
+
+h2 {
+    font-size: 3em;
+    color: #dd7700;
+}
+
+h3 {
+    font-size: 2em;
+    color: #dd7700;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #dd7700;
+}
+
+h5 {
+    font-size: 1em;
+    color: #dd7700;
+}
+
+h6 {
+    font-size: 1em;
+    color: #f00;
+}
+
+.redtext {
+    color: #ff0000;
+}
+
+.greentext {
+    color: #00ff00;
+}
+
+.bluetext {
+    color: #0000ff;
+}
+
+.yellowtext {
+    color: #ffff00;
+}
+
+.orangetext {
+    color: #ff8800;
+}
+
+.olivetext {
+    color: #50533c;
+}
+
+.whitetext {
+    color: #ffffff;
+}
+
+a:link, a:visited {
+    color: #b0b0b0;
+    text-decoration-style: dashed;
+    font-weight: bold;
+}
+
+a:hover, a:active {
+    color: #ffffff;
+}
+
+div {
+    background-color: #2a2a2a;
+}
+
+div.narrow {
+    padding: 1em;
+    border-radius: 3em;
+    width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+div.shape {
+    padding: 1em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+div.clear {
+    width: 100%;
+    background-color: transparent;
+    height: 1em;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.45em;
+    font-size: 0.9em;
+    background-color: #202020;
+    text-align: center;
+}
