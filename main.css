@@ -70,7 +70,7 @@ h6 {
 
 a:link, a:visited {
     color: #b0b0b0;
-    text-decoration-style: dashed;
+    text-decoration-style: underline;
 }
 
 a:hover, a:active {
@@ -156,8 +156,8 @@ div.tclear {
 #navbar a:hover, #navbar a:active {
     float: left;
     display: block;
-    color: #2a2a2a;
-    background-color: #b0b0b0;
+    color: #b0b0b0;
+    background-color: #1a1a1a;
     text-align: center;
     padding: 14px;
     text-decoration: none;
@@ -171,9 +171,8 @@ div.tclear {
 }
 
 #navbar a.active:hover, #navbar a.active:active {
-    background-color: #ff4400;
+    background-color: #1a1a1a;
     border-bottom: 2px solid #ff4400;
-    color: #2a2a2a;
 }
 
 #footer {
