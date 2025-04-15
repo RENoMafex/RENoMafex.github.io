@@ -65,7 +65,6 @@ h6 {
 a:link, a:visited {
     color: #b0b0b0;
     text-decoration-style: dashed;
-    font-weight: bold;
 }
 
 a:hover, a:active {
