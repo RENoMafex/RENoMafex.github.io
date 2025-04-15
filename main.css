@@ -99,6 +99,18 @@ div.clear {
     height: 1em;
 }
 
+div.dclear {
+    width: 100%;
+    background-color: transparent;
+    height: 2em;
+}
+
+div.tclear {
+    width: 100%;
+    background-color: transparent;
+    height: 3em;
+}
+
 #footer {
     position: fixed;
     left: 0;
