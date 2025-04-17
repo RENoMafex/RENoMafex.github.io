@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 SRC_DIR := src
 TEMPLATES_DIR := $(SRC_DIR)/templates
 OUT_DIR := docs
@@ -8,17 +10,16 @@ SRC_PAGES := $(filter-out templates, $(SRC_BASE))
 
 OUT_HTML := $(addprefix $(OUT_DIR)/, $(addsuffix .html, $(SRC_PAGES)))
 
-$(info Gefundene Seiten: $(SRC_PAGES))
-$(info Erzeuge Dateien: $(OUT_HTML))
-
 all: $(OUT_HTML)
 
 $(OUT_DIR)/%.html: $(SRC_DIR)/% $(wildcard $(TEMPLATES_DIR)/*)
 	@mkdir -p $(OUT_DIR)
-	@echo "Generating $@"
+	@echo "Generating $@" 1>&2
 	@cpp -P -nostdinc -I$(SRC_DIR) $< -o $@
+	@echo "Tidy warnings for $@:" 1>&2
+	-@tidy -quiet -indent -modify $@
 
 clean:
 	rm -rf $(OUT_DIR)
 
-.PHONY: all clean
+.PHONY: all prebuild clean
