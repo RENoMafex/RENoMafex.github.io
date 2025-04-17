@@ -17,6 +17,14 @@ $(OUT_DIR)/%.html: $(SRC_DIR)/% $(wildcard $(TEMPLATES_DIR)/*)
 	@echo "Generating $@" 1>&2
 	@cpp -P -nostdinc -I$(SRC_DIR) $< -o $@
 	@echo "Tidy warnings for $@:" 1>&2
-	-@tidy -quiet -indent -modify $@
+	-@tidy -miq --wrap 0 --tidy-mark no\
+		--drop-empty-elements no\
+		--drop-proprietary-attributes no\
+		--output-html yes --show-body-only auto\
+		--force-output yes --fix-uri no\
+		--merge-divs no --merge-spans no\
+		--add-xml-decl no --add-meta-charset no\
+		--indent-spaces 2 --doctype omit\
+		--enclose-block-text no $@
 
 .PHONY: all prebuild
