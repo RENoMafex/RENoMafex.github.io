@@ -2,19 +2,11 @@
 <html>
     <head>
         <title>CSS-Test - Malte Schilling</title>
-<link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-<link rel="shortcut icon" href="/assets/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-<link rel="manifest" href="/assets/site.webmanifest" />
-<link rel="stylesheet" type="text/css" href="main.css">
+        #include "templates/header.html"
     </head>
     <body>
-<div id="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="csstest.html">CSS-Test</a>
-    <a href="credits.html">Credits and Licenses</a>
-</div>
+        #include "templates/navbar.html"
+
         <h1>headline1</h1>
         <h2>headline2</h2>
         <h3>headline3</h3>
@@ -26,6 +18,7 @@
         Which can also be Multiline <br>
         <p>This is a paragraph.</p>
         <abbr title="Content Management System">CMS</abbr>
+
         <div class="round">Here is a way, how a div could look!</div>
         <div class="shape">And another way!</div><br>
         <a href="" class="shape">linkbutton</a>
@@ -38,10 +31,8 @@
         tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br>
         At vero eos et accusam et justo duo dolores et ea rebum.<br>
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
         <div class="dclear"/>
-<div id="footer">
-    <span style="position: absolute; left: 1em;">made by Malte Schilling</span>
-    <a href="index.html">Back to Home.</a>
-</div>
+        #include "templates/back_footer.html"
     </body>
 </html>
