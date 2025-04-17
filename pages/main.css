@@ -77,13 +77,19 @@ a:hover, a:active {
     color: #ffffff;
 }
 
+abbr {
+    text-decoration-style: dotted;
+    cursor: help;
+}
+
 div {
-    background-color: #2a2a2a;
+    /*background-color: #2a2a2a;*/
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
 div.round {
+    background-color: #2a2a2a;
     padding: 1em;
     border-radius: 2em;
     width: fit-content;
@@ -94,6 +100,8 @@ a.round {
     padding: 1em;
     border-radius: 2em;
     width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a.round:hover {
@@ -101,6 +109,7 @@ a.round:hover {
 }
 
 div.shape {
+    background-color: #2a2a2a;
     padding: 1em;
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
@@ -113,6 +122,8 @@ a.shape {
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
     width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a.shape:hover {
