@@ -24,7 +24,7 @@ $(OUT_DIR)/%.html: $(SRC_DIR)/% $(wildcard $(TEMPLATES_DIR)/*)
 		--force-output yes --fix-uri no\
 		--merge-divs no --merge-spans no\
 		--add-xml-decl no --add-meta-charset no\
-		--indent-spaces 2 --doctype omit\
+		--indent-spaces 4 --doctype omit\
 		--enclose-block-text no $@
 
 .PHONY: all prebuild
