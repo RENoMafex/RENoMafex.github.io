@@ -10,7 +10,7 @@
         <h1>Credits:</h1>
         <span>Right now, there is nothing to display here.</span>
 
-        <div class="clear"/>
+        <div class="clear" />
         #include "templates/back_footer.html"
     </body>
 </html>

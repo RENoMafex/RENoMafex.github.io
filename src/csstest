@@ -32,7 +32,7 @@
         At vero eos et accusam et justo duo dolores et ea rebum.<br>
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-        <div class="dclear"/>
+        <div class="dclear" />
         #include "templates/back_footer.html"
     </body>
 </html>
