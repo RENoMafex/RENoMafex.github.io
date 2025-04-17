@@ -1,5 +1,17 @@
 <div id="navbar">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="csstest.html">CSS-Test</a>
     <a href="credits.html">Credits and Licenses</a>
 </div>
+
+<script>
+    const links = document.querySelectorAll('#navbar a');
+    const currentPath = window.location.pathname;
+
+    links.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
+            link.classList.add('active');
+        }
+    });
+</script>
