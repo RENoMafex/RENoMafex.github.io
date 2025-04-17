@@ -19,7 +19,4 @@ $(OUT_DIR)/%.html: $(SRC_DIR)/% $(wildcard $(TEMPLATES_DIR)/*)
 	@echo "Tidy warnings for $@:" 1>&2
 	-@tidy -quiet -indent -modify $@
 
-clean:
-	rm -rf $(OUT_DIR)
-
-.PHONY: all prebuild clean
+.PHONY: all prebuild
