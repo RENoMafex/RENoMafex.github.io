@@ -40,34 +40,6 @@ h6 {
     color: #ff0000;
 }
 
-.redtext {
-    color: #ff0000;
-}
-
-.greentext {
-    color: #00ff00;
-}
-
-.bluetext {
-    color: #0000ff;
-}
-
-.yellowtext {
-    color: #ffff00;
-}
-
-.orangetext {
-    color: #ff8800;
-}
-
-.olivetext {
-    color: #50533c;
-}
-
-.whitetext {
-    color: #ffffff;
-}
-
 a:link, a:visited {
     color: #b0b0b0;
     text-decoration-style: underline;
