@@ -15,7 +15,7 @@ all: $(OUT_HTML) $(OUT_CSS)
 
 $(OUT_DIR)/%.html: $(SRC_DIR)/%.html $(wildcard $(TEMPLATES_DIR)/*)
 	@echo "Generating $@" 1>&2
-	@cpp -P -nostdinc -I$(SRC_DIR) $< -o $@
+	@cpp -P -nostdinc -I$(TEMPLATES_DIR) $< -o $@
 	@echo "Starting \"tidy\" for $@" 1>&2
 	@tidy -miq --wrap 0 --tidy-mark no\
 		--drop-empty-elements no\
