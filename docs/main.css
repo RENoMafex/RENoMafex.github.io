@@ -82,17 +82,13 @@ abbr {
     cursor: help;
 }
 
-div {
-    /*background-color: #2a2a2a;*/
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 div.round {
     background-color: #2a2a2a;
     padding: 1em;
     border-radius: 2em;
     width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a.round {
@@ -114,6 +110,8 @@ div.shape {
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
     width: fit-content;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a.shape {
