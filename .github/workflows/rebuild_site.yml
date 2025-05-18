@@ -6,6 +6,9 @@ on:
       - "src/**"
   workflow_dispatch:
 
+permissions:
+  contents: write # Required to push changes to the repository
+
 jobs:
   build:
     runs-on: ubuntu-latest
