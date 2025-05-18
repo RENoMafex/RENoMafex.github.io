@@ -4,6 +4,7 @@ name: Deploy static content to Pages
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
   push:
     paths: # Automatically trigger when the other workflow pushes to docs
       - "docs/**"
