@@ -1,0 +1,31 @@
+name: Rebuild Site
+
+on:
+  push:
+    paths:
+      - "src/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install make
+      run: sudo apt-get update && sudo apt-get install -y make
+
+    - name: Run make
+      run: make
+
+    - name: Commit and push changes
+      run: |
+        git add --all
+        git commit -m "[bot] chore: Rebuild site" || echo "No changes to commit"
+        git push origin HEAD:main || echo "No changes to push"
