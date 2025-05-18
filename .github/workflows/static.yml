@@ -3,7 +3,10 @@ name: Deploy static content to Pages
 
 on:
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch: # This gets triggered automatically on push by another workflow
+  workflow_dispatch:
+  push:
+    paths: # Automatically trigger when the other workflow pushes to docs
+      - "docs/**"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
