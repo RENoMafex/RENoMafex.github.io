@@ -39,7 +39,17 @@
             if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
                 age--;
             }
-            document.getElementById("preciseAge").title = years + " years, " + months + " months and " + days + " days."
+            if (days === 0 || days > 1) {
+                const daysText = " days.";
+            } else {
+                const daysText = " day.";
+            }
+            if (months === 0 || months > 1) {
+                const monthsText = " months and ";
+            } else {
+                const monthsText = " month and ";
+            }
+            document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
             document.getElementById("age").textContent = age;
     </script>
     <div id="footer">
