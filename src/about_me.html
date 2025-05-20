@@ -30,18 +30,20 @@
                 age--;
             }
 
+            let daysText = "";
             if (days === 0 || days > 1) {
-                const daysText = " days.";
+                daysText = " days.";
             } else {
-                const daysText = " day.";
+                daysText = " day.";
             }
 
+            let monthsText = "";
             if (months === 0 || months > 1) {
-                const monthsText = " months and ";
+                monthsText = " months and ";
             } else {
-                const monthsText = " month and ";
+                monthsText = " month and ";
             }
-            
+
             document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
             document.getElementById("age").textContent = age;
         </script>
