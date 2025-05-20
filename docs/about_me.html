@@ -26,7 +26,7 @@
     </script>
     <div style="max-width: 1000px;">
         <h1>Malte Schilling</h1><br>
-        <div class="clear"></div>Hi, my name is Malte Schilling and i am <span id="age"></span> years old.<br>
+        Hi, my name is Malte Schilling and i am <abbr id="preciseAge"><span id="age"></span></abbr> years old.<br>
         I am a hobby programmer, who loves to automate things, may it be computery stuff or everyday things (for example through the help of microcontrollers).
     </div>
     <script>
@@ -34,9 +34,12 @@
             const birthday = new Date("1995-03-26");
             let age = today.getFullYear() - birthday.getFullYear();
             const months = today.getMonth() - birthday.getMonth();
+            const days = today.getDay() - birthday.getDay();
+            const years = age;
             if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
                 age--;
             }
+            document.getElementById("preciseAge").title = years + " years, " + months + " months and " + days + " days."
             document.getElementById("age").textContent = age;
     </script>
     <div id="footer">
