@@ -11,13 +11,26 @@
         <div style="max-width: 1000px;">
             <h1>Malte Schilling</h1><br>
             <div class="clear"/>
-            Hi, my name is Malte Schilling and i am 30 years old.<br>
+            Hi, my name is Malte Schilling and i am <div id="age"/> years old.<br>
             I am a hobby programmer, who loves to automate things, 
             may it be computery stuff or everyday things (for example through the help of microcontrollers).
-            
+
         </div>
 
 
+
+        <script>
+            const today = new Date();
+            const birthday = new Date("1995-03-26");
+            let age = today.getFullYear() - birthday.getFullYear();
+            const months = today.getMonth() - birthday.getMonth();
+
+            if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
+                age--;
+            }
+
+            document.getElementById("age").textContent = age;
+        </script>
         #include "back_footer"
     </body>
 </html>
