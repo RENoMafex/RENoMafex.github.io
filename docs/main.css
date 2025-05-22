@@ -118,6 +118,13 @@ div.tclear {
     height: 3em;
 }
 
+img.language {
+    display: inline-block;
+    height: 3em;
+    width: auto;
+    margin-right: 0.25em;
+}
+
 #navbar {
     position: sticky;
     top: 0;
