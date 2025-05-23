@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg" />
-<link rel="shortcut icon" href="/assets/myicons/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png" />
-<link rel="manifest" href="/assets/myicons/site.webmanifest" />
-<link rel="stylesheet" type="text/css" href="main.css" />
-        <title>About Me - Malte Schilling</title>
-    </head>
-    <body>
-<div id="navbar">
-    <a href="https://renomafex.github.io">Home</a>
-    <a href="my_testing_page.html">Some Pages for testing</a>
-    <a href="about_me.html">About me</a>
-    <a href="credits.html">Credits and Licenses</a>
-</div>
-<script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg">
+    <link rel="shortcut icon" href="/assets/myicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/myicons/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>About Me - Malte Schilling</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="https://renomafex.github.io">Home</a> <a href="my_testing_page.html">Some Pages for testing</a> <a href="about_me.html">About me</a> <a href="credits.html">Credits and Licenses</a>
+    </div>
+    <script>
     const links = document.querySelectorAll('#navbar a');
     const currentPath = window.location.pathname;
     links.forEach(link => {
@@ -26,25 +23,15 @@
             link.classList.add('active');
         }
     });
-</script>
-        <!-- The following div is simply a container for the main content. -->
-        <div style="max-width: 1000px;">
-            <h1>Malte Schilling</h1>
-            <p>Hi, my name is Malte Schilling and I am <abbr id="preciseAge"><span id="age"><noscript>30</noscript></span></abbr> years old.<br>
-            I am a hobby programmer who loves to automate things, whether it be computer-related tasks or everyday activities
-            (for example, through the use of microcontrollers).</p>
-            <h3>Skillset</h3>
-            <div class="round" style="background-color: grey;">
-                <img class="language" src="/assets/cpp_logo.png" alt="c++ logo">
-                <img class="language" src="/assets/bash-monochrome_dark.png" alt="bash logo">
-                <img class="language" src="/assets/HTML5_logo_and_wordmark.svg" alt="HTML5 logo">
-                <img class="language" src="/assets/CSS3_logo_and_wordmark.svg" alt="CSS logo">
-                <img class="language" src="/assets/Unofficial_JavaScript_logo_2.svg" alt="(unofficial) JS logo">
-                <img class="language" src="/assets/gopher_go_lang.png" alt="the go gopher">
-            </div>
-        </div>
-        <!-- Inside the following script my age gets calculated, so that this side stays up to date automatically. -->
-        <script>
+    </script> <!-- The following div is simply a container for the main content. -->
+    <div style="max-width: 1000px;">
+        <h1>Malte Schilling</h1>
+        <p>Hi, my name is Malte Schilling and I am <abbr id="preciseAge"><span id="age"><noscript>30</noscript></span></abbr> years old.<br>
+        I am a hobby programmer who loves to automate things, whether it be computer-related tasks or everyday activities (for example, through the use of microcontrollers).</p>
+        <h3>Skillset</h3>
+        <div class="round" style="background-color: grey;"><img class="language" src="/assets/cpp_logo.png" alt="c++ logo"> <img class="language" src="/assets/bash-monochrome_dark.png" alt="bash logo"> <img class="language" src="/assets/HTML5_logo_and_wordmark.svg" alt="HTML5 logo"> <img class="language" src="/assets/CSS3_logo_and_wordmark.svg" alt="CSS logo"> <img class="language" src="/assets/Unofficial_JavaScript_logo_2.svg" alt="(unofficial) JS logo"> <img class="language" src="/assets/gopher_go_lang.png" alt="the go gopher"></div>
+    </div><!-- Inside the following script my age gets calculated, so that this side stays up to date automatically. -->
+    <script>
             const today = new Date();
             const birthday = new Date("1995-03-26");
             let age = today.getFullYear() - birthday.getFullYear();
@@ -68,16 +55,9 @@
             }
             document.getElementById("preciseAge").title = years + " years, " + months + monthsText + days + daysText;
             document.getElementById("age").textContent = age;
-        </script>
-<div id="footer">
-    <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">&heartsuit;</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span>
-    <a href="#">Back to Top.</a>
-    <span class="right">
-        <abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">
-            Last changed:
-        </abbr>
-        "May 23 2025"
-    </span>
-</div>
-    </body>
+    </script>
+    <div id="footer">
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "May 23 2025"</span>
+    </div>
+</body>
 </html>

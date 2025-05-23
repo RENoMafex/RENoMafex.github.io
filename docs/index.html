@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Malte Schilling</title>
-<meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg" />
-<link rel="shortcut icon" href="/assets/myicons/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png" />
-<link rel="manifest" href="/assets/myicons/site.webmanifest" />
-<link rel="stylesheet" type="text/css" href="main.css" />
-    </head>
-    <body>
-<div id="navbar">
-    <a href="https://renomafex.github.io">Home</a>
-    <a href="my_testing_page.html">Some Pages for testing</a>
-    <a href="about_me.html">About me</a>
-    <a href="credits.html">Credits and Licenses</a>
-</div>
-<script>
+<head>
+    <title>Malte Schilling</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg">
+    <link rel="shortcut icon" href="/assets/myicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/myicons/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="https://renomafex.github.io">Home</a> <a href="my_testing_page.html">Some Pages for testing</a> <a href="about_me.html">About me</a> <a href="credits.html">Credits and Licenses</a>
+    </div>
+    <script>
     const links = document.querySelectorAll('#navbar a');
     const currentPath = window.location.pathname;
     links.forEach(link => {
@@ -26,25 +23,15 @@
             link.classList.add('active');
         }
     });
-</script>
-        <h1>Malte Schilling</h1>
-        Right now the only purpose of this Site is to learn a bit of HTML and CSS.<br><br>
-        Fun fact: This site uses <abbr title="gnu compiler collection">GCC</abbr> to generate the
-        <abbr title="Hyper Text Markup Language">HTML</abbr> files. <br>
-        To find out how, visit the <a href="https://github.com/RENoMafex/renomafex.github.io/">Repo</a>.
-        <div class="clear"/>
-        <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">&heartsuit;</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span>
-        <span>
-            I really dont know, what to write here.<br>
-            May this be a demonstration, of how i implemented the <b>footer</b>.
-        </span>
-        <span class="right">
-            <abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">
-                Last changed:
-            </abbr>
-            "May 23 2025"
-        </span>
-        </div>
-    </body>
+    </script>
+    <h1>Malte Schilling</h1>Right now the only purpose of this Site is to learn a bit of HTML and CSS.<br>
+    <br>
+    Fun fact: This site uses <abbr title="gnu compiler collection">GCC</abbr> to generate the <abbr title="Hyper Text Markup Language">HTML</abbr> files.<br>
+    To find out how, visit the <a href="https://github.com/RENoMafex/renomafex.github.io/">Repo</a>.
+    <div class="clear"></div>
+    <div id="footer">
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <span>I really dont know, what to write here.<br>
+        May this be a demonstration, of how i implemented the <b>footer</b>.</span> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "May 23 2025"</span>
+    </div>
+</body>
 </html>
