@@ -28,7 +28,7 @@ jobs:
     - name: Install make # --no-install-recommends for not reinstalling man-db
       run: sudo apt-get update && sudo apt-get install --no-install-recommends -y make tidy gcc
     - name: Run make
-      run: make all
+      run: make $(OUT_CSS)
     - name: Commit and push changes
       run: |
         git add --all
