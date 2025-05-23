@@ -19,6 +19,7 @@ $(OUT_DIR)/%.html: $(SRC_DIR)/%.html $(wildcard $(TEMPLATES_DIR)/*)
 	@echo "Starting \"tidy\" for $@" 1>&2
 	@tidy -miq --wrap 0 --tidy-mark no\
 		--drop-empty-elements no\
+		--markup no\
 		--drop-proprietary-attributes no\
 		--output-html yes --show-body-only auto\
 		--force-output yes --fix-uri no\
