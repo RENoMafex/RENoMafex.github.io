@@ -8,7 +8,7 @@ This is my personal homepage, it's main purpose is for me to learn a bit of HTML
 
 #### But how does the C Preprocessor generate valid html?
 
-Lets assume we have 2 relevant files:<br>
+Lets assume we have an empty folder called `pages` and 2 relevant files:<br>
 `index.html`:
 ```html
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ Lets assume we have 2 relevant files:<br>
 </div>
 ```
 
-Now if you have a C compiler installed, you can use its preprocessor, to automatically copy the contents of the `footer.html` file, right where the `#include "footer.html"` statement lives. For my example i am using `GCC`. The command, to make a file called `index_out.html` we can run the command <span style="white-space: nowrap">`cpp -P -nostdinc index.html -o index_out.html`</span>
+Now if you have a C compiler installed, you can use its preprocessor, to automatically copy the contents of the `footer.html` file, right where the `#include "footer.html"` statement lives. For my example i am using `GCC`. The command, to make a file called `pages/index.html` we can run the command <span style="white-space: nowrap">`cpp -P -nostdinc index.html -o pages/index.html`</span>
 in the terminal. Lets go through the parts of this command:
 <table><tr>
     <th style="white-space: nowrap; text-align: center; font-size: 150%;">Command</th>
@@ -47,7 +47,7 @@ in the terminal. Lets go through the parts of this command:
     <th style="text-align: center;">index.html</th>
     <th>The input file.</th>
 </tr><tr>
-    <th style="white-space: nowrap; text-align: center;">-o index_out.html</th>
+    <th style="white-space: nowrap; text-align: center;">-o pages/index.html</th>
     <th>Specifies the output file.</th>
 </tr></table>
 
