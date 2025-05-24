@@ -1,3 +1,4 @@
+.PHONY: all
 .NOTPARALLEL:
 
 SRC_DIR := src
@@ -32,4 +33,3 @@ $(OUT_DIR)/%.css: $(SRC_DIR)/%.css
 	@echo "Replacing $@"
 	@cp -f $< $@
 
-.PHONY: all
