@@ -1,7 +1,8 @@
 # [RENoMafex.github.io](https://RENoMafex.github.io)
 
-This is my personal homepage, it's main purpose is for me to learn a bit of HTML, CSS and JS.<br>
+This is my personal homepage, it's main purpose is for me to learn a bit of HTML, CSS and JS.<br><!---
 <sup>And showing off</sup>
+--->
 
 ## For those who are here to find out
 
