@@ -55,4 +55,4 @@ So in conclusion this command will in our example tell the C preprocessor, to ta
 For this repo the actual command would be something like <span style="white-space: nowrap">`cpp -P -Isrc/templates -nostdinc src/index.html -o docs/index.html`</span>, where `-Isrc/templates` adds the `src/templates` folder to the include paths, which means, that you can store the templates for lines, which should be replaced inside that folder.
 
 #### But the output files look ugly!
-Yes, they do, simply because the C preprocessor doesnt care about indentation, so i use a tool called [tidy](https://www.html-tidy.org/) to fix that
+Yes, they do, simply because the C preprocessor doesnt care about indentation, so i use a tool called [tidy](https://www.html-tidy.org/) to fix that.
