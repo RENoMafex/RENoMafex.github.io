@@ -34,10 +34,19 @@
     <script>
             const today = new Date();
             const birthday = new Date("1995-03-26");
-            let age = today.getFullYear() - birthday.getFullYear();
-            const months = today.getMonth() - birthday.getMonth();
-            const days = today.getDate() - birthday.getDate();
-            const years = age;
+            const age = today.getFullYear() - birthday.getFullYear();
+            let months = today.getMonth() - birthday.getMonth();
+            let days = today.getDate() - birthday.getDate();
+            let years = age;
+            if (months < 0 || (months === 0 && days < 0)) {
+                years--;
+                months += 12;
+            }
+            if (days < 0) {
+                monts--;
+                const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+                days += lastDayOfMonth
+            }
             if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
                 age--;
             }
