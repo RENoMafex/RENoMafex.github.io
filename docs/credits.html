@@ -12,7 +12,13 @@
 </head>
 <body>
     <div id="navbar">
-        <a href="https://renomafex.github.io">Home</a> <a href="my_testing_page.html">Some Pages for testing</a> <a href="about_me.html">About me</a> <a href="credits.html">Credits and Licenses</a>
+        <a href="https://renomafex.github.io">Home</a>
+        <div class="dropdown">
+            <a href="my_testing_page.html" class="dropbutton">Some Pages for testing</a>
+            <div class="dropdown-content">
+                <a href="github.com">github</a> <a href="csstest.html">CSS-Test</a>
+            </div>
+        </div><a href="about_me.html">About me</a> <a href="credits.html">Credits and Licenses</a>
     </div><br>
     <br>
     <br>
@@ -26,6 +32,17 @@
         if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
             link.classList.add('active');
         }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const isActive = dropdown.querySelector('.dropdown-content a.active');
+            if (isActive) {
+                const dropbutton = dropdown.querySelector('.dropbutton');
+                if (dropbutton) {
+                    dropbutton.classList.add('active');
+                }
+            }
+        });
     });
     </script>
     <h1>Credits:</h1>
