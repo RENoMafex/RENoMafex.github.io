@@ -190,6 +190,10 @@ img.language {
     border: 1.5px solid #1a1a1a;
 }
 
+.dropdown:hover .dropdown-content a.active {
+    border: 1px solid #ff4400;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
