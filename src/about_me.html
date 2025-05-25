@@ -30,7 +30,7 @@
             const birthday = new Date("1995-03-26");
             let age = today.getFullYear() - birthday.getFullYear();
             const months = today.getMonth() - birthday.getMonth();
-            const days = today.getDay() - birthday.getDay();
+            const days = today.getDate() - birthday.getDate();
             const years = age;
 
             if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
