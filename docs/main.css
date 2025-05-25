@@ -130,7 +130,8 @@ img.language {
 }
 
 #navbar {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     overflow: hidden;
     background-color: #2a2a2a;
