@@ -36,7 +36,7 @@
             const birthday = new Date("1995-03-26");
             let age = today.getFullYear() - birthday.getFullYear();
             const months = today.getMonth() - birthday.getMonth();
-            const days = today.getDay() - birthday.getDay();
+            const days = today.getDate() - birthday.getDate();
             const years = age;
             if (months < 0 || (months === 0 && today.getDate() < birthday.getDate())) {
                 age--;
@@ -57,7 +57,7 @@
             document.getElementById("age").textContent = age;
     </script>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "May 24 2025"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "May 25 2025"</span>
     </div>
 </body>
 </html>
