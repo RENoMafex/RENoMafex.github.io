@@ -44,6 +44,10 @@ h6 {
     color: #ff0000;
 }
 
+p {
+    margin-top: 0.25em;
+}
+
 a:link, a:visited {
     color: #b0b0b0;
     text-decoration-style: underline;
