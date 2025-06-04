@@ -29,7 +29,7 @@ Lets assume we have an empty folder called `pages` and 2 relevant files:<br>
 </div>
 ```
 
-Now if you have a C compiler installed, you can use its preprocessor, to automatically copy the contents of the `footer.html` file, right where the `#include "footer.html"` statement lives. For my example i am using `GCC`. The command, to make a file called `pages/index.html` we can run the command <span style="white-space: nowrap">`cpp -P -nostdinc index.html -o pages/index.html`</span>
+Now if you have a C compiler installed, you can use its preprocessor, to automatically copy the contents of the `footer.html` file, right where the `#include "footer.html"` statement lives. For my example i am using `GCC`. The command, to make a file called `pages/index.html` we can run the command <span style="white-space: nowrap">`cpp -w -P -nostdinc index.html -o pages/index.html`</span>
 in the terminal. Lets go through the parts of this command:
 <table><tr>
     <th style="white-space: nowrap; text-align: center; font-size: 150%;">Command</th>
@@ -37,6 +37,9 @@ in the terminal. Lets go through the parts of this command:
 </tr><tr>
     <th style="text-align: center;">cpp</th>
     <th>Starts the C PreProcessor.</th>
+</tr><tr>
+    <th style="text-align: center;">-w</th>
+    <th>Do not output warnings. Otherwise you will have some unwanted stuff on screen.</th>
 </tr><tr>
     <th style="text-align: center;">-P</th>
     <th>Do not generate #line directives. This keeps the file clean of unwanted stuff.</th>
@@ -52,7 +55,7 @@ in the terminal. Lets go through the parts of this command:
 </tr></table>
 
 So in conclusion this command will in our example tell the C preprocessor, to take that `#include "footer.html"` line inside of `index.html` and replace it with the contents of the `footer.html` file and output a file called `out_index.html`.<br>
-For this repo the actual command would be something like <span style="white-space: nowrap">`cpp -P -Isrc/templates -nostdinc src/index.html -o docs/index.html`</span>, where `-Isrc/templates` adds the `src/templates` folder to the include paths, which means, that you can store the templates for lines, which should be replaced inside that folder.
+For this repo the actual command would be something like <span style="white-space: nowrap">`cpp -w -P -Isrc/templates -nostdinc src/index.html -o docs/index.html`</span>, where `-Isrc/templates` adds the `src/templates` folder to the include paths, which means, that you can store the templates for lines, which should be replaced inside that folder.
 
 #### But the output files look ugly!
 Yes, they do, simply because the C preprocessor doesnt care about indentation, so i use a tool called [tidy](https://www.html-tidy.org/) to fix that.
