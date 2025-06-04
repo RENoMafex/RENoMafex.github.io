@@ -144,7 +144,7 @@ img.language {
     background-color: #2a2a2a;
 }
 
-#navbar a, #navbar a:visited, .dropbutton {
+#navbar a, #navbar a:visited, #navbar .dropbutton, #navbar .placeholder {
     float: left;
     display: block;
     text-align: center;
@@ -152,7 +152,7 @@ img.language {
     text-decoration: none;
 }
 
-#navbar a:hover, #navbar a:active, .dropdown:hover .dropbutton {
+#navbar a:hover, #navbar a:active, #navbar .dropdown:hover .dropbutton {
     float: left;
     display: block;
     color: #b0b0b0;
@@ -169,12 +169,12 @@ img.language {
     font-weight: bold;
 }
 
-#navbar a.active:hover, #navbar a.active:active, .dropbutton.active:hover {
+#navbar a.active:hover, #navbar a.active:active, #navbar .dropbutton.active:hover {
     background-color: #1a1a1a;
     border-bottom: 2px solid #ff4400;
 }
 
-.dropdown .dropbutton {
+#navbar .dropdown .dropbutton {
     background-color: #2a2a2a;
     color: #b0b0b0;
     overflow: hidden;
@@ -183,23 +183,23 @@ img.language {
     margin: 0;
 }
 
-.dropdown {
+#navbar .dropdown {
     float: left;
     overflow: visible;
     position: relative;
 }
 
-.dropdown:hover .dropdown-content {
+#navbar .dropdown:hover .dropdown-content {
     display: block;
     padding: -1.5px;
     border: 1.5px solid #1a1a1a;
 }
 
-.dropdown:hover .dropdown-content a.active {
+#navbar .dropdown:hover .dropdown-content a.active {
     border: 1px solid #ff4400;
 }
 
-.dropdown-content {
+#navbar .dropdown-content {
     display: none;
     position: absolute;
     z-index: 1;
@@ -208,7 +208,7 @@ img.language {
     min-width: 100%;
 }
 
-.dropdown-content a {
+#navbar .dropdown-content a {
     float: none !important;
     display: block;
     background-color: #2a2a2a;
