@@ -195,6 +195,7 @@ img.language {
     display: block;
     padding: -1.5px;
     border: 1.5px solid #1a1a1a;
+    background-color: #2a2a2a;
 }
 
 .dropdown:hover .dropdown-content a.active {
