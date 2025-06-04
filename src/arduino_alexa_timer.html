@@ -5,14 +5,27 @@
         #include "header.html"
         <title>Alexa Clock - Malte Schilling</title>
         <style>
-            p {
-                max-width: 1000px;
+            p {max-width: 1000px;}
+            .TOC {color: #dd7700;}
+            .TOC ul {
+                list-style: none;
+                padding-left: 16px;
+                margin-top: 0;
+                margin-bottom: 0;
             }
-            nav {
-                color: #dd7700;
+            .TOC li::before {
+                content: "> ";
+                font-weight: normal;
             }
-            nav #TOC a {
-                color: inherit !important;
+            .TOC li:hover::before {
+                font-weight: bold;
+                color: #ff8800;
+            }
+            .TOC a {
+                color: inherit;
+            }
+            .TOC a:hover {
+                color: #ff8800;
             }
         </style>
     </head>
@@ -21,18 +34,17 @@
         <h1>Alexa Clock - A Clock for Alexa</h1>
         <h3 style="margin-top: 0;">which is also Capable of displaying timers</h3>
         <div class="tclear"/>
-        <div class="round">
-            <h1 style="margin-top: 0;">WIP - Work in Progress</h1>
+        <div class="round" style="background-color: #bb6600;">
+            <h1 style="margin-top: 0; color: #000000;">WIP - Work in Progress</h1>
         </div>
         <div class="tclear"/>
-        <h4>Table of Contents:</h4>
-        <nav id="TOC">
+        <h4 style="margin: 0;">Table of Contents:</h4>
+        <nav class="TOC">
             <ul>
                 <li><a href="#why">Why?</a></li>
                 <li><a href="#needed">What do you need?</a></li>
             </ul>
         </nav>
-
         <h4 id="why">Why?</h4>
         <p>
             The newer Echo Dots from Amazon have pretty neat clocks at the front, which can display not only the time but also timers, temperature, and more, but the older Alexas don't have such a display. However I like some of the older, "larger" Alexas, because of their sound quality, especially for the living room.
