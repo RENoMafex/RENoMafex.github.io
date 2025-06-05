@@ -171,6 +171,7 @@ img.language {
 
 #navbar a.active:hover, #navbar a.active:active, #navbar .dropbutton.active:hover {
     background-color: #1a1a1a;
+    color: #ff4400;
     border-bottom: 2px solid #ff4400;
 }
 
