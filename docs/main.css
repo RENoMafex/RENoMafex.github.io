@@ -214,6 +214,10 @@ img.language {
     background-color: #2a2a2a;
 }
 
+#navbar .dropdown-content a:hover {
+    background-color: #1a1a1a;
+}
+
 #footer {
     position: fixed;
     display: flex;
