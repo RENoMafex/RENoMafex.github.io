@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        #include "header.html"
-        <title>Programming Projects - Malte Schilling</title>
-    </head>
-    <body>
-        #include "navbar.html"
-        <h1> My Programming Projects</h1>
-        <div style="width: fit-content; display: flex; flex-direction: column;"> <!-- so that all link divs have the same width -->
-            Right now there is nothing to show here...
-        </div>
 
-        #include "back_footer.html"
-    </body>
+<head>
+    #include "header.html"
+    <title>Programming Projects - Malte Schilling</title>
+    <link rel="stylesheet" href="main.css"> <!-- DELETE THIS LINE -->
+    <style>
+        table tr td a.shape {
+            display: block;
+            width: auto !important;
+            text-align: center;
+        }
+        table tr td {
+            padding-right: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    #include "navbar.html"
+    <h1> My Programming Projects</h1>
+    <h4>Useful ZSH scripts (some may or may not work in other shells)</h4>
+
+    <table>
+        <tr>
+            <td><a class="shape" href="https://github.com/RENoMafex/auto-fetch">auto-fetch</a></td>
+            <td>Automatically runs "git fetch" whenever you enter a repo root.</td>
+        </tr>
+        <tr>
+            <td><a class="shape" href="https://github.com/RENoMafex/lsgrep">lsgrep</a></td>
+            <td>Automatically filter the output from ls using grep.</td>
+        </tr>
+    </table>
+
+    #include "back_footer.html"
+</body>
+
 </html>
