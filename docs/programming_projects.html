@@ -9,15 +9,23 @@
     <link rel="manifest" href="/assets/myicons/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>Programming Projects - Malte Schilling</title>
+    <link rel="stylesheet" href="main.css"><!-- DELETE THIS LINE -->
+
+    <style>
+        table tr td a.shape {
+            display: block;
+            width: auto !important;
+            text-align: center;
+        }
+        table tr td {
+            padding-right: 1em;
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar">
         <a href="https://renomafex.github.io">Home</a> <a href="about_me.html">About me</a>
-        <div class="placeholder"></div>
-        <div class="dropdown">
-            <a href="programming_projects.html" class="dropbutton">My Programming Projects</a>
-            <div class="dropdown-content"></div>
-        </div>
+        <div class="placeholder"></div><a href="programming_projects.html" class="dropbutton">My Programming Projects</a>
         <div class="dropdown">
             <a href="arduino_projects.html" class="dropbutton">My Arduino Projects</a>
             <div class="dropdown-content">
@@ -57,15 +65,20 @@
     </script>
     <h1>My Programming Projects</h1>
     <h4>Useful ZSH scripts (some may or may not work in other shells)</h4>
-    <div style="display: flex;">
-        <div style="width: fit-content; display: flex; flex-direction: column;">
-            <!-- so that all link divs have the same width -->
-            <a href="https://github.com/RENoMafex/auto-fetch" class="shape">auto-fetch</a> <a href="#" class="shape">asdjklhasjkldfhsdjkdndopaksljdalsndajksdhbn</a>
-        </div>
-        <div style="flex: 1;">
-            abcdefg
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td>
+                <a class="shape" href="https://github.com/RENoMafex/auto-fetch">auto-fetch</a>
+            </td>
+            <td>Automatically runs "git fetch" whenever you enter a repo root.</td>
+        </tr>
+        <tr>
+            <td>
+                <a class="shape" href="https://github.com/RENoMafex/lsgrep">lsgrep</a>
+            </td>
+            <td>Automatically filter the output from ls using grep.</td>
+        </tr>
+    </table>
     <div id="footer">
         <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Jun 6 2025"</span>
     </div>
