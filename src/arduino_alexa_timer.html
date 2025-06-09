@@ -45,6 +45,7 @@
             <ul>
                 <li><a href="#why">Why?</a></li>
                 <li><a href="#ftry">The first try</a></li>
+                <li><a href="#breakthrough">The breakthrough</a></li>
                 <li><a href="#needed">What do you need?</a></li>
             </ul>
         </nav>
@@ -52,19 +53,37 @@
         <h4 id="why">Why?</h4>
         <p>
             The newer Echo Dots from Amazon have pretty neat clocks at the front, which can display not only the time but also timers, temperature, and more, but the older Alexas don't have such a display. However I like some of the older, "larger" Alexas, because of their sound quality, especially for the living room.
-        </p>
-        <p>
+        </p><p>
             Now my situation is that i have some nice sounding Alexas in my living room, but no way of showing timers, that i set in my living room, let alone on the same device as i would normally see the time (like a clock).
-        </p>
-        <p>
+        </p><p>
             The features that i wanted for my clock is to display the remaining time of a timer, as well of showing the current time, if no timer is set. I don't care about showing the weather or other stuff, as that would add a <strong>huge</strong> amount of hassle, as i want to work with simple 7-Segment displays.
         </p>
 
         <h4 id="ftry">The first try</h4>
         <p>
-            The first try............
+            The idea that came to my mind, how i could realize that, was to simply use one of those cheap 4 digit displays with some multiplexing, since the RA4M1 on the Uno R4 WiFi should be strong enough for that, <strong>right?</strong>
+        </p>
+        <h5>Nope, it wasn't.</h5>
+        <p>
+            The display was WAY to flickery to look at, since the arduino had to do some other work (like catching mqtt <strong>often</strong> which acts like a delay).
+        </p>
+        <h5>The Solution</h5>
+        <p>
+            The fix for that behaviour was to use another arduino (Uno R3) to do the multiplexing. So the Uno R4 WiFi would get the time from NTP and the remaining time on the timer of the Alexa (via mqtt/ioBroker) and send those numbers over UART to the Uno R3, which then displays it <strong>without ANY flickering!</strong>
+        </p>
+        <h5>And now?</h5>
+        <p>
+            Now i had what i wanted, an digital clock, which displays the time, unless a timer was set on the living room Alexa. Great! But it didn't look great, as there were two arduino Unos and an ugly looking breadboard with those tiny 7-Segment displays on top of my cupboard.
+        </p><p>
+            The next step was to get rid of the Uno R3 and get some bigger displays.
         </p>
 
+        <h4 id="breakthrough">The breakthrough</h4>
+        <p>
+            This was a rather simple step. I had some <abbr title="A generic 5V shift register">74HC595</abbr> and a few meters of some 12V <abbr title="Red, Green, Blue. Essentially means, that you can archive every possible color, through mixing those three.">RGB</abbr> <abbr title="Chip on Board is an LED technology where multiple chips are mounted directly on a substrate to create a bright, uniform light source.">COB</abbr> <abbr title="Light emmitting diode">LED</abbr>-Strip Laying around waiting for some project.
+        </p><p>
+            To be written..............
+        </p>
 
 
         <h4 id="needed">What do you need?</h4>
