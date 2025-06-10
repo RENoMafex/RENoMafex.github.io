@@ -100,11 +100,11 @@ code.com {
 }
 
 code.lit {
-    color: darkgreen !important;
+    color: lightgreen !important;
 }
 
 code.t {
-    color: yellow !important;
+    color: gold !important;
 }
 
 code.kw {
@@ -215,12 +215,12 @@ img.language {
 }
 
 #navbar a.active:hover, #navbar .dropdown.dropbutton.active:hover {
-    box-shadow: inset darkgray 0 0 3px 2px, inset #ff4400 0 -1em 0 -0.85em !important;
+    box-shadow: inset #ff4400 0 -2em 0.5em -1.85em !important;
 }
 
 #navbar a.active, #navbar a.active:visited {
     background-color: #2a2a2a;
-    box-shadow: inset 0 -1em 0 -0.85em #ff4400;
+    box-shadow: inset 0 -2em 0.5em -1.85em #ff4400;
     /* border-bottom: 0.15em solid #ff4400; */
     color: #ff4400 !important;
     font-weight: bold;
@@ -229,7 +229,7 @@ img.language {
 #navbar a.active:hover, #navbar a.active:active, #navbar .dropbutton.active:hover, #navbar .dropbutton.active:active {
     background-color: #1a1a1a;
     color: #ff4400;
-    box-shadow: inset 0 -1em 0 -0.85em #ff4400;
+    box-shadow: inset 0 -2em 0.5em -1.85em #ff4400;
     /* border-bottom: 2px solid #ff4400; */
 }
 
