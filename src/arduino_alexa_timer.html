@@ -37,7 +37,9 @@
         <div class="tclear"/>
         <div class="round" style="background-color: #bb6600; color: #000000; text-align: center;">
             <h1 style="margin-top: 0; color: #000000">WIP - Work in Progress</h1>
-            The "Alexa Timer" Project is not finished yet!
+            The "Alexa Timer" Project is not finished yet!<br>
+            TODO:<br>
+            add some pictures!
         </div>
         <div class="tclear"/>
         <h4 style="margin: 0;">Table of Contents:</h4>
@@ -47,6 +49,7 @@
                 <li><a href="#ftry">The first try</a></li>
                 <li><a href="#breakthrough">The breakthrough</a></li>
                 <li><a href="#needed">What do you need?</a></li>
+                <li><a href="#build">Lets build this!</a></li>
             </ul>
         </nav>
 
@@ -80,11 +83,18 @@
 
         <h4 id="breakthrough">The breakthrough</h4>
         <p>
-            This was a rather simple step. I had some <abbr title="A generic 5V shift register">74HC595</abbr> and a few meters of some 12V <abbr title="Red, Green, Blue. Essentially means, that you can archive every possible color, through mixing those three.">RGB</abbr> <abbr title="Chip on Board is an LED technology where multiple chips are mounted directly on a substrate to create a bright, uniform light source.">COB</abbr> <abbr title="Light emmitting diode">LED</abbr>-Strip Laying around waiting for some project.
+            This was a rather simple step. I had some <abbr title="A generic 5V shift register">74HC595</abbr> and five meters of some cuttable 12V <abbr title="Red, Green, Blue. Essentially means, that you can archive every possible color, through mixing those three.">RGB</abbr> <abbr title="Chip on Board is an LED technology where multiple chips are mounted directly on a substrate to create a bright, uniform light source.">COB</abbr> <abbr title="Light emmitting diode">LED</abbr>-Strip Laying around waiting for some project.
         </p><p>
-            To be written..............
+            Now i just had to convert the code of the Uno R4 WiFi from giving out the time via UART to using <code><code class="func">shiftOut</code>()</code> and build my own <strong>BIG</strong> 7-Segment display.
+        </p><p>
+            Since the LED-Strip is cuttable about every 3,3cm and we know, that we will need 4 times 7 Segments, its pretty easy to calculate, how big our Segments will get:<br>
+            <code class="com">5m / (4 digits * 7 segments)  = 17,86cm</code><br>
+            which we have to make devisible by 3,3cm:<br>
+            <code class="com">17,86cm / 3,3cm &TildeTilde; 5,4 cuttables </code><br>
+            which means, every segment will be 5 cuttables long, which means every segment has a length of 16,5cm.
+        </p><p>
+            So in conclusion the whole clock display will be about 33cm high which should be enough to be readable from across the room!
         </p>
-
 
         <h4 id="needed">What do you need?</h4>
         <ul>
@@ -92,6 +102,10 @@
             <li>A WiFi Network (2.4 GHz)</li>
             <li>ioBroker running in your Network</li>
         </ul>
+
+        <h4 id="build">Time to build this!</h4>
+        <h5>... i haven't yet</h5>
+
 
         <div class="dclear"/>
         #include "back_footer.html"

@@ -80,7 +80,9 @@
     <h3 style="margin-top: 0;">which is also Capable of displaying timers</h3>
     <div class="tclear"></div>
     <div class="round" style="background-color: #bb6600; color: #000000; text-align: center;">
-        <h1 style="margin-top: 0; color: #000000">WIP - Work in Progress</h1>The "Alexa Timer" Project is not finished yet!
+        <h1 style="margin-top: 0; color: #000000">WIP - Work in Progress</h1>The "Alexa Timer" Project is not finished yet!<br>
+        TODO:<br>
+        add some pictures!
     </div>
     <div class="tclear"></div>
     <h4 style="margin: 0;">Table of Contents:</h4>
@@ -98,6 +100,9 @@
             <li>
                 <a href="#needed">What do you need?</a>
             </li>
+            <li>
+                <a href="#build">Lets build this!</a>
+            </li>
         </ul>
     </nav>
     <h4 id="why">Why?</h4>
@@ -114,17 +119,25 @@
     <p>Now i had what i wanted, an digital clock, which displays the time, unless a timer was set on the living room Alexa. Great! But it didn't look great, as there were two arduino Unos and an ugly looking breadboard with those tiny 7-Segment displays on top of my cupboard.</p>
     <p>The next step was to get rid of the Uno R3 and get some bigger displays.</p>
     <h4 id="breakthrough">The breakthrough</h4>
-    <p>This was a rather simple step. I had some <abbr title="A generic 5V shift register">74HC595</abbr> and a few meters of some 12V <abbr title="Red, Green, Blue. Essentially means, that you can archive every possible color, through mixing those three.">RGB</abbr> <abbr title="Chip on Board is an LED technology where multiple chips are mounted directly on a substrate to create a bright, uniform light source.">COB</abbr> <abbr title="Light emmitting diode">LED</abbr>-Strip Laying around waiting for some project.</p>
-    <p>To be written..............</p>
+    <p>This was a rather simple step. I had some <abbr title="A generic 5V shift register">74HC595</abbr> and five meters of some cuttable 12V <abbr title="Red, Green, Blue. Essentially means, that you can archive every possible color, through mixing those three.">RGB</abbr> <abbr title="Chip on Board is an LED technology where multiple chips are mounted directly on a substrate to create a bright, uniform light source.">COB</abbr> <abbr title="Light emmitting diode">LED</abbr>-Strip Laying around waiting for some project.</p>
+    <p>Now i just had to convert the code of the Uno R4 WiFi from giving out the time via UART to using <code><code class="func">shiftOut</code>()</code> and build my own <strong>BIG</strong> 7-Segment display.</p>
+    <p>Since the LED-Strip is cuttable about every 3,3cm and we know, that we will need 4 times 7 Segments, its pretty easy to calculate, how big our Segments will get:<br>
+    <code class="com">5m / (4 digits * 7 segments) = 17,86cm</code><br>
+    which we have to make devisible by 3,3cm:<br>
+    <code class="com">17,86cm / 3,3cm ≈ 5,4 cuttables</code><br>
+    which means, every segment will be 5 cuttables long, which means every segment has a length of 16,5cm.</p>
+    <p>So in conclusion the whole clock display will be about 33cm high which should be enough to be readable from across the room!</p>
     <h4 id="needed">What do you need?</h4>
     <ul>
         <li>Arduino Uno R4 WiFi</li>
         <li>A WiFi Network (2.4 GHz)</li>
         <li>ioBroker running in your Network</li>
     </ul>
+    <h4 id="build">Time to build this!</h4>
+    <h5>... i haven't yet</h5>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Jun 9 2025"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Jun 10 2025"</span>
     </div>
 </body>
 </html>

@@ -1,3 +1,6 @@
+/* Import Fira Code Font */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -61,6 +64,51 @@ a:hover, a:active {
 abbr {
     text-decoration-style: dotted;
     cursor: help;
+}
+
+code, pre {
+    font-family: 'Fira Code', monospace;
+    font-feature-settings: "liga" on, "calt" on;
+    color: #ffffff;
+    background-color: #303030;
+}
+
+code {
+    border-radius: 0.33em;
+}
+
+pre {
+    border-radius: 1em;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+code.func {
+    color: cyan !important;
+}
+
+code.var {
+    color: red !important;
+}
+
+code.const {
+    color: darkorange !important;
+}
+
+code.com {
+    color: darkgray !important;
+}
+
+code.lit {
+    color: darkgreen !important;
+}
+
+code.t {
+    color: yellow !important;
+}
+
+code.kw {
+    color: violet !important;
 }
 
 div.round {
