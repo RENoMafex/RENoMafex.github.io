@@ -182,6 +182,17 @@ img.language {
     margin-right: 0.25em;
 }
 
+table.projects tr td a.shape,
+table.projects tr td a.round {
+    display: block;
+    width: auto !important;
+    text-align: center;
+}
+
+table.projects tr td {
+    padding-right: 1em;
+}
+
 #navbar {
     position: fixed;
     width: 100vw;
