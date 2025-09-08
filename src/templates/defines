@@ -1,1 +1,2 @@
 #define HOMEURL "https://renomafex.github.io"
+#define newtab target="_blank" rel="noopener noreferrer"
