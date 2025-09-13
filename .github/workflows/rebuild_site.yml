@@ -28,9 +28,11 @@ jobs:
     - name: remove man-db # it makes apt so damn sloooooooowwwwwwwww
       run: sudo apt purge -y man-db
     - name: Install tools # --no-install-recommends for not reinstalling man-db
-      run: sudo apt-get update && sudo apt-get install --no-install-recommends -y make tidy gcc git-restore-mtime
+      run: sudo apt-get update && sudo apt-get install --no-install-recommends -y make tidy gcc
     - name: restore mtime
-      run: git-restore-mtime
+      uses: chetan/git-restore-mtime-action
+      with:
+        working-directory: '.'
     - name: Run make
       run: make all
     - name: Commit and push changes
