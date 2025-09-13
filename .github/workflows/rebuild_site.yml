@@ -23,6 +23,8 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: remove man-db # it makes apt so damn sloooooooowwwwwwwww
       run: sudo apt purge -y man-db
     - name: Install tools # --no-install-recommends for not reinstalling man-db
