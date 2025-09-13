@@ -28,7 +28,7 @@ jobs:
     - name: Install tools # --no-install-recommends for not reinstalling man-db
       run: sudo apt-get update && sudo apt-get install --no-install-recommends -y make tidy gcc git-restore-mtime
     - name: restore mtime
-      run: git restore-mtime --i-still-use-this
+      run: git-restore-mtime
     - name: Run make
       run: make all
     - name: Commit and push changes
