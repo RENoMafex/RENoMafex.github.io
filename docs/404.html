@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg">
+    <link rel="shortcut icon" href="/assets/myicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/myicons/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="https://renomafex.github.io">Home</a> <a href="about_me">About me</a>
+        <div class="placeholder"></div><a href="programming_projects" class="dropbutton">My Programming Projects</a>
+        <div class="dropdown">
+            <a href="arduino_projects" class="dropbutton">My Arduino Projects</a>
+            <div class="dropdown-content">
+                <a href="arduino_alexa_timer">Clock for Alexa</a>
+            </div>
+        </div>
+        <div class="placeholder"></div><a href="credits" style="float: right; margin-right: 16px;">Credits and Licenses</a>
+        <div class="dropdown" style="float: right; margin-right: 16px;">
+            <a href="my_testing_page" class="dropbutton">Some Pages for testing</a>
+            <div class="dropdown-content">
+                <a href="csstest">CSS-Test</a>
+            </div>
+        </div>
+    </nav><br>
+    <br>
+    <script>
+
+    const links = document.querySelectorAll('#navbar a');
+    const currentPath = window.location.pathname;
+    links.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
+            link.classList.add('active');
+        }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const isActive = dropdown.querySelector('.dropdown-content a.active');
+            if (isActive) {
+                const dropbutton = dropdown.querySelector('.dropbutton');
+                if (dropbutton) {
+                    dropbutton.classList.add('active');
+                }
+            }
+        });
+    });
+    </script>
+    <div>
+        <h1 style="font-size: 8em;">Oops...</h1>
+        <h1>The page you are looking for does not exist!</h1><noscript><!-- No JS: nothing shown --></noscript> 
+        <script>
+
+                document.write('<h6>You tried to access "<span id="requested-url"></span>"</h6>');
+                window.onload = function() {
+                document.getElementById('requested-url').textContent = window.location.pathname + window.location.search + window.location.hash;
+                };
+        </script>
+    </div>
+    <div id="footer">
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <span><a href="malte-schilling.eu">Home</a>&nbsp; <a href="githubstatus.com">Status of Hoster</a></span> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Sep 13 2025"</span>
+    </div>
+</body>
+</html>
