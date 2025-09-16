@@ -1,4 +1,5 @@
 name: Rebuild Site
+description: Rebuild the site, than push it and deploy to GitHub Pages.
 
 on:
   push:
