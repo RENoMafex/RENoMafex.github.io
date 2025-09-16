@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write # Required to push changes to the repository
-  actions: write # Required to trigger other workflows
 
 jobs:
   build:
