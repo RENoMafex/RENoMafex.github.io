@@ -23,10 +23,8 @@ jobs:
 
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     - name: remove man-db # it makes apt so damn sloooooooowwwwwwwww
-      run: sudo apt purge -y man-db
+      run: sudo apt-get purge -y man-db
     - name: Install tools # --no-install-recommends for not reinstalling man-db
       run: sudo apt-get update && sudo apt-get install --no-install-recommends -y make tidy gcc
     - name: restore mtime
