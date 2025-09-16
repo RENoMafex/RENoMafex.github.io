@@ -6,11 +6,11 @@ on:
       - "**"
   workflow_dispatch:
 
-permissions:
-  contents: write # Required to push changes to the repository
-
 jobs:
   build:
+    name: Build and Commit
+    permissions:
+      contents: write # Required to push changes to the repository
     runs-on: ubuntu-latest
     steps:
     - name: Set up git
@@ -39,6 +39,7 @@ jobs:
         git push origin HEAD:main || echo "No changes to push"
 
   deploy:
+    name: Deploy to GitHub Pages
     permissions:
       contents: read
       pages: write
