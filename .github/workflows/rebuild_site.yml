@@ -3,9 +3,7 @@ name: Rebuild Site
 on:
   push:
     paths:
-      - "src/**"
-      - "Makefile"
-      - ".github/**"
+      - "**"
   workflow_dispatch:
 
 permissions:
