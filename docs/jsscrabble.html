@@ -57,7 +57,8 @@
         });
     });
     </script>
-    <h1>Scrabble scoreboard for 2 players</h1>
+    <h1>Scrabble scoreboard for 2 players</h1><noscript>
+    <h6>Note: This only works with JS activated!</h6></noscript>
     <table>
         <tr>
             <td>
@@ -88,19 +89,21 @@
     let pointsp1 = 0;
     let pointsp2 = 0;
     function recalc1() {
-    const pta = document.getElementById("pta1").value;
-    pointsp1 += parseInt(pta);
-    document.getElementById("pointsp1").textContent = pointsp1;
+    const input = document.getElementById("pta1");
+    const output = document.getElementById("pointsp1");
+    pointsp1 += parseInt(input.value);
+    output.textContent = pointsp1;
+    input.value = 0;
     }
     function recalc2() {
-    const pta = document.getElementById("pta2").value;
-    pointsp2 += parseInt(pta);
-    document.getElementById("pointsp2").textContent = pointsp2;
+    const input = document.getElementById("pta2");
+    const output = document.getElementById("pointsp2");
+    pointsp2 += parseInt(input.value);
+    output.textContent = pointsp2;
+    input.value = 0;
     }
-    const btnp1 = document.getElementById("btnp1");
-    const btnp2 = document.getElementById("btnp2");
-    btnp1.addEventListener("click", recalc1);
-    btnp2.addEventListener("click", recalc2);
+    const btnp1 = document.getElementById("btnp1").addEventListener("click", recalc1);
+    const btnp2 = document.getElementById("btnp2").addEventListener("click", recalc2);
     document.getElementById("pointsp1").textContent = pointsp1;
     document.getElementById("pointsp2").textContent = pointsp2;
     </script>
