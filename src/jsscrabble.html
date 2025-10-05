@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Malte Schilling</title>
+		#include "header.html"
+		<style>
+			table tr td {
+				padding-right: 2em;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		#include "navbar.html"
+
+		<h1>Scrabble scoreboard for 2 players</h1>
+
+		<table>
+			<tr>
+				<td><h3>Player A</h3></td>
+				<td><h3>Player B</h3></td>
+			</tr>
+			<tr>
+				<td>Points:</td>
+				<td>Points:</td>
+			</tr>
+			<tr>
+				<td><span id="pointsp1"></span></td>
+				<td><span id="pointsp2"></span></td>
+			</tr>
+			<tr>
+				<td>Points to add:</td>
+				<td>Points to add:</td>
+			</tr>
+			<tr>
+				<td><input type="number" id="pta1"><input type="button" value="add" id="btnp1"></td>
+				<td><input type="number" id="pta2"><input type="button" value="add" id="btnp2"></td>
+			</tr>
+		</table>
+
+		<script>
+			let pointsp1 = 0;
+			let pointsp2 = 0;
+
+			function recalc1() {
+				const pta = document.getElementById("pta1").value;
+				pointsp1 += parseInt(pta);
+				document.getElementById("pointsp1").textContent = pointsp1;
+			}
+
+			function recalc2() {
+				const pta = document.getElementById("pta2").value;
+				pointsp2 += parseInt(pta);
+				document.getElementById("pointsp2").textContent = pointsp2;
+			}
+
+
+			const btnp1 = document.getElementById("btnp1");
+			const btnp2 = document.getElementById("btnp2");
+
+			btnp1.addEventListener("click", recalc1);
+			btnp2.addEventListener("click", recalc2);
+
+			document.getElementById("pointsp1").textContent = pointsp1;
+			document.getElementById("pointsp2").textContent = pointsp2;
+		</script>
+	</body>
+</html>

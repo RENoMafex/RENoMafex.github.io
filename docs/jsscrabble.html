@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>404</title>
+    <title>Malte Schilling</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/assets/myicons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/assets/myicons/favicon.svg">
@@ -9,6 +9,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/myicons/apple-touch-icon.png">
     <link rel="manifest" href="/assets/myicons/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+    table tr td {
+    padding-right: 2em;
+    text-align: center;
+    }
+    </style>
 </head>
 <body>
     <nav id="navbar">
@@ -51,21 +57,52 @@
         });
     });
     </script>
-    <div style="text-align: center;">
-        <h1 style="font-size: 8em;">Oops...</h1>
-        <h1 style="font-size: 6em;">HTTP status code: 404</h1>
-        <h1>The page you are looking for does not exist!</h1><noscript><!-- No JS: nothing shown --></noscript> 
-        <script>
-
-                document.write('<h6>You tried to access "<span id="requested-url"></span>"</h6>');
-                window.onload = function() {
-                document.getElementById('requested-url').textContent = window.location.pathname + window.location.search + window.location.hash;
-                };
-        </script> <span>If you have any questions about this error, please write a mail to &lt;<a href="mailto:webmaster@malte-schilling.eu">webmaster@malte-schilling.eu</a>&gt;</span>
-    </div>
-    <div class="dclear"></div>
-    <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <span><a href="https://malte-schilling.eu">Home</a>&nbsp; <a href="https://githubstatus.com" target="_blank" rel="noopener noreferrer">Status of Hoster</a></span> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Oct 5 2025"</span>
-    </div>
+    <h1>Scrabble scoreboard for 2 players</h1>
+    <table>
+        <tr>
+            <td>
+                <h3>Player A</h3>
+            </td>
+            <td>
+                <h3>Player B</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>Points:</td>
+            <td>Points:</td>
+        </tr>
+        <tr>
+            <td><span id="pointsp1"></span></td>
+            <td><span id="pointsp2"></span></td>
+        </tr>
+        <tr>
+            <td>Points to add:</td>
+            <td>Points to add:</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="pta1"><input type="button" value="add" id="btnp1"></td>
+            <td><input type="number" id="pta2"><input type="button" value="add" id="btnp2"></td>
+        </tr>
+    </table>
+    <script>
+    let pointsp1 = 0;
+    let pointsp2 = 0;
+    function recalc1() {
+    const pta = document.getElementById("pta1").value;
+    pointsp1 += parseInt(pta);
+    document.getElementById("pointsp1").textContent = pointsp1;
+    }
+    function recalc2() {
+    const pta = document.getElementById("pta2").value;
+    pointsp2 += parseInt(pta);
+    document.getElementById("pointsp2").textContent = pointsp2;
+    }
+    const btnp1 = document.getElementById("btnp1");
+    const btnp2 = document.getElementById("btnp2");
+    btnp1.addEventListener("click", recalc1);
+    btnp2.addEventListener("click", recalc2);
+    document.getElementById("pointsp1").textContent = pointsp1;
+    document.getElementById("pointsp2").textContent = pointsp2;
+    </script>
 </body>
 </html>
