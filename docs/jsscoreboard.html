@@ -91,6 +91,7 @@
     function recalc1() {
     const input = document.getElementById("pta1");
     const output = document.getElementById("pointsp1");
+    if (input.value == NaN) input.value = 0;
     pointsp1 += parseInt(input.value);
     output.textContent = pointsp1;
     input.value = 0;
@@ -98,6 +99,7 @@
     function recalc2() {
     const input = document.getElementById("pta2");
     const output = document.getElementById("pointsp2");
+    if (input.value == NaN) input.value = 0;
     pointsp2 += parseInt(input.value);
     output.textContent = pointsp2;
     input.value = 0;
