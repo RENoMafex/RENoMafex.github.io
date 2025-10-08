@@ -42,6 +42,12 @@
 		</table>
 
 		<script>
+			/* 
+			TODO:
+			- make recalc a single function, so that more players are possible in the future
+			- add function for converting words to points
+			- add logic for x2 x3
+			*/
 			let pointsp1 = 0;
 			let pointsp2 = 0;
 
@@ -61,6 +67,37 @@
 				pointsp2 += parseInt(input.value);
 				output.textContent = pointsp2;
 				input.value = 0;
+			}
+
+			function wordToPoints(string) {
+				let int = 0;
+				string = string.toUpperCase();
+				if (!isNaN(parseInt(string))) {
+					int = parseInt(string)
+				} else {
+					for (i = 0; i < string.length; i++) {
+						c = string[i];
+						if (c == 'E' || c == 'N' || c == 'S' || c == 'I' || c == 'R' || c == 'T' || c == 'U' || c == 'A' || c == 'D') {
+							int += 1;
+						} else if (c == 'H' || c == 'G' || c == 'L' || c == 'O') {
+							int += 2;
+						} else if (c == 'M' || c == 'B' || c == 'W' || c == 'Z') {
+							int += 3;
+						} else if (c == 'C' || c == 'F' || c == 'K' || c == 'P') {
+							int += 4;
+						} else if (c == 'Ä' || c == 'J' || c == 'Ü' || c == 'V') {
+							int += 6;
+						} else if (c == 'Ö' || c == 'x') {
+							int += 8;
+						} else if (c == 'Q' || c == 'Y') {
+							int += 10;
+						} else if (0 < c < 10) {
+							int += c;
+						}
+					}
+				}
+
+				return int;
 			}
 
 			const btnp1 = document.getElementById("btnp1").addEventListener("click", recalc1);
