@@ -81,8 +81,8 @@
             <td>Points to add:</td>
         </tr>
         <tr>
-            <td><input type="text" id="pta1" value=""> <input type="button" value="add" id="btnp1"></td>
-            <td><input type="text" id="pta2" value=""> <input type="button" value="add" id="btnp2"></td>
+            <td><input type="text" id="pta1" value=""><input type="button" value="x1" id="x1p1"><!--<input type="button" value="x2" id="x2p1"><input type="button" value="x3" id="x3p1">--></td>
+            <td><input type="text" id="pta2" value=""><input type="button" value="x1" id="x1p2"><!--<input type="button" value="x2" id="x2p2"><input type="button" value="x3" id="x3p2">--></td>
         </tr>
     </table>
     <script>
@@ -131,14 +131,14 @@
     }
     return int;
     }
-    const btnp1 = document.getElementById("btnp1").addEventListener("click", recalc1);
-    const btnp2 = document.getElementById("btnp2").addEventListener("click", recalc2);
+    const x1p1 = document.getElementById("x1p1").addEventListener("click", recalc1);
+    const x1p2 = document.getElementById("x1p2").addEventListener("click", recalc2);
     document.getElementById("pointsp1").textContent = pointsp1;
     document.getElementById("pointsp2").textContent = pointsp2;
     </script>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Oct 13 2025"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Oct 14 2025"</span>
     </div>
 </body>
 </html>
