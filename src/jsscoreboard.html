@@ -36,8 +36,8 @@
 				<td>Points to add:</td>
 			</tr>
 			<tr>
-				<td><input type="number" id="pta1" value="0"> <input type="button" value="add" id="btnp1"></td>
-				<td><input type="number" id="pta2" value="0"> <input type="button" value="add" id="btnp2"></td>
+				<td><input type="text" id="pta1" value=""> <input type="button" value="add" id="btnp1"></td>
+				<td><input type="text" id="pta2" value=""> <input type="button" value="add" id="btnp2"></td>
 			</tr>
 		</table>
 
@@ -53,19 +53,17 @@
 			function recalc1() {
 				const input = document.getElementById("pta1");
 				const output = document.getElementById("pointsp1");
-				if (isNaN(parseInt(input.value))) input.value = 0; //catch NaNs
-				pointsp1 += parseInt(input.value);
+				pointsp1 += wordToPoints(input.value);
 				output.textContent = pointsp1;
-				input.value = 0;
+				input.value = "";
 			}
 
 			function recalc2() {
 				const input = document.getElementById("pta2");
 				const output = document.getElementById("pointsp2");
-				if (isNaN(parseInt(input.value))) input.value = 0; //catch NaNs
-				pointsp2 += parseInt(input.value);
+				pointsp2 += wordToPoints(input.value);
 				output.textContent = pointsp2;
-				input.value = 0;
+				input.value = "";
 			}
 
 			function wordToPoints(string) {
@@ -98,6 +96,7 @@
 
 				return int;
 			}
+
 			const btnp1 = document.getElementById("btnp1").addEventListener("click", recalc1);
 			const btnp2 = document.getElementById("btnp2").addEventListener("click", recalc2);
 
