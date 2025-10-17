@@ -20,8 +20,8 @@
 
 		<table>
 			<tr>
-				<td><h3>Player A</h3></td>
-				<td><h3>Player B</h3></td>
+				<td><h3>Player 1</h3></td>
+				<td><h3>Player 2</h3></td>
 			</tr>
 			<tr>
 				<td>Points:</td>
@@ -47,22 +47,25 @@
 			- make recalc a single function, so that more players are possible in the future
 			- add logic for x2 x3
 			*/
-			let pointsp1 = 0;
-			let pointsp2 = 0;
 
-			function recalc1() {
-				const input = document.getElementById("pta1");
-				const output = document.getElementById("pointsp1");
-				pointsp1 += wordToPoints(input.value);
-				output.textContent = pointsp1;
-				input.value = "";
+			let points = {
+				1: 0,
+				2: 0
 			}
 
-			function recalc2() {
-				const input = document.getElementById("pta2");
-				const output = document.getElementById("pointsp2");
-				pointsp2 += wordToPoints(input.value);
-				output.textContent = pointsp2;
+			function setupEventListener() {
+				document.getElementById("x1p1").addEventListener("click", () => recalc(1));
+				document.getElementById("x1p2").addEventListener("click", () => recalc(2));
+
+				document.getElementById("pointsp1").textContent = points[1];
+				document.getElementById("pointsp2").textContent = points[2];
+			}
+
+			function recalc(player) {
+				const input = document.getElementById("pta" + player);
+				const output = document.getElementById("pointsp" + player);
+				points[player] += wordToPoints(input.value);
+				output.textContent = points[player];
 				input.value = "";
 			}
 
@@ -97,11 +100,8 @@
 				return int;
 			}
 
-			const x1p1 = document.getElementById("x1p1").addEventListener("click", recalc1);
-			const x1p2 = document.getElementById("x1p2").addEventListener("click", recalc2);
+			document.addEventListener("DOMContentLoaded", setupEventListener);
 
-			document.getElementById("pointsp1").textContent = pointsp1;
-			document.getElementById("pointsp2").textContent = pointsp2;
 		</script>
 
 		#include "back_footer.html"
