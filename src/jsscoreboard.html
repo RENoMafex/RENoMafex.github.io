@@ -42,7 +42,7 @@
 		</table>
 
 		<script>
-			/* 
+			/*
 			TODO:
 			- make recalc a single function, so that more players are possible in the future
 			- add logic for x2 x3
@@ -57,15 +57,15 @@
 				document.getElementById("x1p1").addEventListener("click", () => recalc(1));
 				document.getElementById("x1p2").addEventListener("click", () => recalc(2));
 
-				document.getElementById("pointsp1").textContent = points[1];
-				document.getElementById("pointsp2").textContent = points[2];
+				document.getElementById("pointsp1").textContent = points[1].toString();
+				document.getElementById("pointsp2").textContent = points[2].toString();
 			}
 
 			function recalc(player) {
 				const input = document.getElementById("pta" + player);
 				const output = document.getElementById("pointsp" + player);
 				points[player] += wordToPoints(input.value);
-				output.textContent = points[player];
+				output.textContent = points[player].toString();
 				input.value = "";
 			}
 
