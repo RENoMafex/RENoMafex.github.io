@@ -93,14 +93,14 @@
     function setupEventListener() {
     document.getElementById("x1p1").addEventListener("click", () => recalc(1));
     document.getElementById("x1p2").addEventListener("click", () => recalc(2));
-    document.getElementById("pointsp1").textContent = points[1];
-    document.getElementById("pointsp2").textContent = points[2];
+    document.getElementById("pointsp1").textContent = points[1].toString();
+    document.getElementById("pointsp2").textContent = points[2].toString();
     }
     function recalc(player) {
     const input = document.getElementById("pta" + player);
     const output = document.getElementById("pointsp" + player);
     points[player] += wordToPoints(input.value);
-    output.textContent = points[player];
+    output.textContent = points[player].toString();
     input.value = "";
     }
     function wordToPoints(string) {
@@ -121,7 +121,7 @@
        int += 4;
       } else if (c == 'Ä' || c == 'J' || c == 'Ü' || c == 'V') {
        int += 6;
-      } else if (c == 'Ö' || c == 'x') {
+      } else if (c == 'Ö' || c == 'X') {
        int += 8;
       } else if (c == 'Q' || c == 'Y') {
        int += 10;
@@ -136,7 +136,7 @@
     </script>
     <div class="dclear"></div>
     <div id="footer">
-        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Oct 17 2025"</span>
+        <span class="left">made by <strong>Malte Schilling</strong> with <span style="color: red;">♥</span> and <a href="https://gcc.gnu.org/">gcc</a>.</span> <a href="#">Back to Top.</a> <span class="right"><abbr title="The displayed date is not necessarily the date, the content was changed last. It could also be changes inside for instance the navbar or the footer.">Last changed:</abbr> "Oct 22 2025"</span>
     </div>
 </body>
 </html>
